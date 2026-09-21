@@ -1,4 +1,3 @@
-
 services:
   postgres-lab:
     image: postgres:16-alpine
