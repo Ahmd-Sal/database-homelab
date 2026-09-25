@@ -1,12 +1,17 @@
 services:
-  postgres-lab:
+  app_db:
     image: postgres:16-alpine
-    container_name: postgres_devops_lab
+    container_name: app_db
     restart: unless-stopped
+    networks:
+        - public-net
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
-      POSTGRES_DB: app_db
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PW}
+      POSTGRES_DB: ${PG_DB}
+      PG_USER: ${PG_USER}
+      PG_DB: ${PG_DB}
+      APP_USER_PW: ${APP_USER_PW}
     ports:
       - "5432:5432"
     volumes:
@@ -24,6 +29,20 @@ services:
         limits:
           cpus: '1.0'
           memory: 1g
+
+  python-api:
+    build:
+      context: ./python-app
+      dockerfile: Dockerfile
+    networks:
+        - public-net
+    ports:
+      - 8000:8000 
+    env_file:
+        - .env
+networks:
+  public-net:
+    driver: bridge
 
 volumes:
   pg_data:

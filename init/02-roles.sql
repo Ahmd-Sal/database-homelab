@@ -18,6 +18,6 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT USAGE, SELECT
   ON SEQUENCES TO app_users;
 
 -- 2. Create a user and assign the role
-CREATE USER app_user WITH PASSWORD 'app_user';
+CREATE USER app_user;
 GRANT app_users TO app_user;
 
