@@ -17,6 +17,8 @@ services:
     volumes:
       # Data persistence
       - pg_data:/var/lib/postgresql/data
+      # A bind mount for practcing pg_dump and pg_restore
+      - ./pg-backups:/pg-backups
       # Custom configuration
       - ./config/postgresql.conf:/etc/postgresql/postgresql.conf:ro
       # Automatic initialization scripts

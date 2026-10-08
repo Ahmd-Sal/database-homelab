@@ -1,3 +1,7 @@
+\set ON_ERROR_STOP on
+
+BEGIN;
+
 -- 1. Create a Group Role
 CREATE ROLE app_users;
 GRANT CONNECT ON DATABASE app_db TO app_users;
@@ -21,3 +25,4 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT USAGE, SELECT
 CREATE USER app_user;
 GRANT app_users TO app_user;
 
+COMMIT;
