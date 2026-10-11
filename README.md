@@ -1,20 +1,42 @@
-Database Homelab
+# Database Homelab
 
-Overview
+## Overview
+
 Setting up an environment to practice database management and understand low-level concepts.
+Added a FastAPI with 
 
-Completed Tasks
-- Replication: Done
-- Caching: Done
-- pg_pool: Pending
-- Sharding: Pending
-- pg_dump and pg_restore: Done
+## Completed Tasks
 
-Prerequisites
-1. **Docker Compose Installation**
-2. **Environment Setup**
-   - Copy .env.example to .env
-   - Modify the required fields
-3. **Start the Environment**
-   - Run docker compose up -d 
+- [x] Replication: Done
+- [x] Caching: Done
+- [x] Authentication: Done
+- [ ] PgPooling: Pending
+- [ ] Sharding: Pending
+- [x] pg_dump and pg_restore: Done
 
+## Prerequisites
+
+only docker Docker Compose is needed
+
+### Environment Setup
+
+```bash
+cp .env.example .env
+```
+- Modify the required fields in .env
+
+### Start the Environment
+
+```bash
+docker compose up -d
+```
+## Verify running processes
+
+```bash
+docker compose stats
+```
+### Stop the Environment
+
+```bash
+docker compose down
+```
