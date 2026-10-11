@@ -42,3 +42,5 @@ docker compose stats
 ```bash
 docker compose down
 ```
+## Usage
+Go to http://localhost:8000/docs where you will find the available apis and how to use each one.
