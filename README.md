@@ -21,6 +21,8 @@ only docker Docker Compose is needed
 ## Environment Setup
 
 ```bash
+git clone https://github.com/Ahmd-Sal/database-homelab.git
+cd database-homelab
 cp .env.example .env
 ```
 - Modify the required fields in .env
