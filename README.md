@@ -18,7 +18,7 @@ Added a FastAPI with
 
 only docker Docker Compose is needed
 
-### Environment Setup
+## Environment Setup
 
 ```bash
 cp .env.example .env
@@ -30,7 +30,7 @@ cp .env.example .env
 ```bash
 docker compose up -d
 ```
-## Verify running processes
+### Verify running processes
 
 ```bash
 docker compose stats
