@@ -1,7 +1,5 @@
 # Database Homelab
 
-## Overview
-
 Setting up an environment to practice database management and understand low-level concepts.
 Also built a simple FastAPI interface for user registration and login to practice implementing stateful sessions.
 
